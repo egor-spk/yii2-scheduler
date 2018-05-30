@@ -1,0 +1,35 @@
+{
+	"name": "egorspk/yii2-scheduler",
+	"description": "Yii2 scheduler module",
+	"type": "yii2-extension",
+	"minimum-stability": "dev",
+	"keywords": [
+		"yii2",
+		"scheduler",
+		"cron",
+		"crontab"
+	],
+	"license": "MIT",
+	"version": "1.0.0",
+	"support": {
+		"source": "https://bitbucket.org/egorspk/yii2-scheduler/src",
+		"issues": "https://bitbucket.org/egorspk/yii2-scheduler/issues"
+	},
+	"authors": [{
+			"name": "SpK",
+			"homepage": "https://bitbucket.org/egorspk"
+		}
+	],
+	"require": {
+		"yiisoft/yii2": "*",
+		"kartik-v/yii2-widget-datepicker": "*",
+		"kartik-v/yii2-field-range": "*",
+		"dragonmantank/cron-expression": "^1.2",
+		"hanneskod/classtools": "~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"spk\\scheduler\\": ""
+		}
+	}
+}
