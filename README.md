@@ -69,6 +69,7 @@ All calls *echo* statement will be written in the log of the task.
 
 ## User interface
 The user interface is divided into 3 tabs:
+
 * Task list;
 
 ![Task list](img/task_list.png)
