@@ -12,12 +12,12 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run:
 
 ```
-php composer.phar require --prefer-dist egorspk/yii2-scheduler "*"
+composer require egorspk/yii2-scheduler
 ```
 
 or add
 ```
-"egorspk/yii2-scheduler": "*"
+"egorspk/yii2-scheduler": "^1.0"
 ```
 to the require section of your `composer.json` file.
 
@@ -72,15 +72,15 @@ The user interface is divided into 3 tabs:
 
 * Task list;
 
-![Task list](img/task_list.png)
+![Task list](https://bytebucket.org/egorspk/yii2-scheduler/raw/49c076bf79ff8aa281cc8cad5ec2224cbb3fe5bc/img/task_list.png)
 
 * Add/Edit task;
 
-![Add/Edit task](img/add-edit_task.png)
+![Add/Edit task](https://bytebucket.org/egorspk/yii2-scheduler/raw/49c076bf79ff8aa281cc8cad5ec2224cbb3fe5bc/img/add-edit_task.png)
 
 * Task execution log.
 
-![Logs](img/logs.png)
+![Logs](https://bytebucket.org/egorspk/yii2-scheduler/raw/49c076bf79ff8aa281cc8cad5ec2224cbb3fe5bc/img/logs.png)
 
 ##Note
 
