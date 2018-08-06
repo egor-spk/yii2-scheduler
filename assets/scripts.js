@@ -26,7 +26,7 @@ Scheduler = {
             Scheduler.common.prevRoute = route;
             $.ajax({
                     type: 'GET',
-                    url: 'index.php?r=scheduler/' + route,
+                    url: '/scheduler/' + route,
                     success: function (data) {
                         $(Scheduler.common.spinner).fadeOut(200, function () {
                             $(Scheduler.common.tabContent).html(data).fadeIn(200);
@@ -88,7 +88,7 @@ Scheduler = {
 
             $.ajax({
                     type: 'GET',
-                    url: 'index.php?r=scheduler/run-task&id=' + id,
+                    url: '/scheduler/run-task&id=' + id,
                     success: function (data) {
                         res = JSON.parse(data);
                         console.log(res);
@@ -129,9 +129,9 @@ Scheduler = {
                 if (confirm('Are you sure you want to delete this item?')) {
                     $.ajax({
                             type: 'POST',
-                            url: 'index.php?r=scheduler/task-delete&id=' + id,
+                            url: '/scheduler/task-delete&id=' + id,
                             success: function (data) {
-                                $.pjax.reload({container: '#grid-pjax', url: 'index.php?r=scheduler/tasks'});
+                                $.pjax.reload({container: '#grid-pjax', url: '/scheduler/tasks'});
                             },
                             error: function (jqXHR) {
                                 Scheduler.common.error(jqXHR.status);
@@ -153,10 +153,10 @@ Scheduler = {
                 $.ajax({
                         type: 'POST',
                         data: $('form#date-range').serialize(),
-                        url: 'index.php?r=scheduler/logs-delete',
+                        url: '/scheduler/logs-delete',
                         success: function (data) {
                             if (data != 0)
-                                $.pjax.reload({container: '#grid-pjax', url: 'index.php?r=scheduler/logs'});
+                                $.pjax.reload({container: '#grid-pjax', url: '/scheduler/logs'});
                             alert('Deleted ' + data + ' rows');
                         },
                         error: function (jqXHR) {
@@ -170,7 +170,7 @@ Scheduler = {
         onView: function (id) {
             $.ajax({
                     type: 'GET',
-                    url: 'index.php?r=scheduler/log-output&id=' + id,
+                    url: '/scheduler/log-output&id=' + id,
                     success: function (data) {
                         var $modal = $('#output-modal');
                         $modal.find('.modal-body textarea').empty().html(data);
@@ -199,7 +199,7 @@ Scheduler = {
                 if (confirm('Are you sure you want to delete this item?')) {
                     $.ajax({
                             type: 'POST',
-                            url: 'index.php?r=scheduler/task-delete&id=' + id,
+                            url: '/scheduler/task-delete&id=' + id,
                             success: function (data) {
                                 Scheduler.common.changeTabContent('tasks');
                                 $(Scheduler.common.navtabs + '.active').removeClass('active');
