@@ -88,7 +88,7 @@ Scheduler = {
 
             $.ajax({
                     type: 'GET',
-                    url: '/scheduler/run-task&id=' + id,
+                    url: '/scheduler/run-task?id=' + id,
                     success: function (data) {
                         res = JSON.parse(data);
                         if (res.status === true)
@@ -106,13 +106,13 @@ Scheduler = {
         },
 
         onView: function (id) {
-            Scheduler.common.changeTabContent('task-view&id=' + id);
+            Scheduler.common.changeTabContent('task-view?id=' + id);
             $(Scheduler.common.navtabs + '.active').removeClass('active');
             $(Scheduler.common.navtabs).find('[href=task-create]').parent().addClass('active');
         },
 
         onEdit: function (id) {
-            Scheduler.common.changeTabContent('task-update&id=' + id);
+            Scheduler.common.changeTabContent('task-update?id=' + id);
             $(Scheduler.common.navtabs + '.active').removeClass('active');
             $(Scheduler.common.navtabs).find('[href=task-create]').parent().addClass('active');
         },
@@ -128,7 +128,7 @@ Scheduler = {
                 if (confirm('Are you sure you want to delete this item?')) {
                     $.ajax({
                             type: 'POST',
-                            url: '/scheduler/task-delete&id=' + id,
+                            url: '/scheduler/task-delete?id=' + id,
                             success: function (data) {
                                 $.pjax.reload({container: '#grid-pjax', url: '/scheduler/tasks'});
                             },
@@ -169,7 +169,7 @@ Scheduler = {
         onView: function (id) {
             $.ajax({
                     type: 'GET',
-                    url: '/scheduler/log-output&id=' + id,
+                    url: '/scheduler/log-output?id=' + id,
                     success: function (data) {
                         var $modal = $('#output-modal');
                         $modal.find('.modal-body textarea').empty().html(data);
@@ -198,7 +198,7 @@ Scheduler = {
                 if (confirm('Are you sure you want to delete this item?')) {
                     $.ajax({
                             type: 'POST',
-                            url: '/scheduler/task-delete&id=' + id,
+                            url: '/scheduler/task-delete?id=' + id,
                             success: function (data) {
                                 Scheduler.common.changeTabContent('tasks');
                                 $(Scheduler.common.navtabs + '.active').removeClass('active');
@@ -213,7 +213,7 @@ Scheduler = {
             },
 
         onEdit: function (id) {
-            Scheduler.common.changeTabContent('task-update&id=' + id);
+            Scheduler.common.changeTabContent('task-update?id=' + id);
         },
 
         onLogs: function (id) {

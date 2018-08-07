@@ -10,7 +10,7 @@
 		"crontab"
 	],
 	"license": "MIT",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"support": {
 		"source": "https://bitbucket.org/egorspk/yii2-scheduler/src",
 		"issues": "https://bitbucket.org/egorspk/yii2-scheduler/issues"
