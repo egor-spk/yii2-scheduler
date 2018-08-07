@@ -91,7 +91,6 @@ Scheduler = {
                     url: '/scheduler/run-task&id=' + id,
                     success: function (data) {
                         res = JSON.parse(data);
-                        console.log(res);
                         if (res.status === true)
                             $modalContent.addClass('modal-ok');
                         else
@@ -229,10 +228,9 @@ Scheduler = {
         init: function () {
             $(this.methods).change(function () {
                 var className = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
-                console.log(className);
                 var methodName = $(this).find(':selected').text();
                 $(Scheduler.edit.command).val(className + '::' + methodName);
             });
         },
     }
-}
+};
