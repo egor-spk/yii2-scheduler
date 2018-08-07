@@ -37,7 +37,7 @@ class TaskRunner extends Model
             }
 
             // If at least one of tasks was executed with a error, then the general result is false
-            if (isset($results[false])) {
+            if (in_array(false, $results)) {
                 return false;
             } elseif (empty($results)) {
                 return 0;
@@ -50,6 +50,7 @@ class TaskRunner extends Model
     /**
      * Execute a task
      * @param SchedulerTask $task
+     * @return bool
      */
     private function RunTask($task)
     {
