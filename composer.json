@@ -10,14 +10,14 @@
 		"crontab"
 	],
 	"license": "MIT",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"support": {
-		"source": "https://bitbucket.org/egorspk/yii2-scheduler/src",
-		"issues": "https://bitbucket.org/egorspk/yii2-scheduler/issues"
+		"source": "https://github.com/egor-spk/yii2-schedulerc",
+		"issues": "https://github.com/egor-spk/yii2-scheduler/issues"
 	},
 	"authors": [{
-			"name": "SpK",
-			"homepage": "https://bitbucket.org/egorspk"
+			"name": "Egor Kuzmin",
+			"homepage": "https://github.com/egor-spk"
 		}
 	],
 	"require": {
