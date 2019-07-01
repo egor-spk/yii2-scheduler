@@ -72,15 +72,15 @@ The user interface is divided into 3 tabs:
 
 * Task list;
 
-![Task list](https://bytebucket.org/egorspk/yii2-scheduler/raw/49c076bf79ff8aa281cc8cad5ec2224cbb3fe5bc/img/task_list.png)
+![Task list](img/task_list.png)
 
 * Add/Edit task;
 
-![Add/Edit task](https://bytebucket.org/egorspk/yii2-scheduler/raw/49c076bf79ff8aa281cc8cad5ec2224cbb3fe5bc/img/add-edit_task.png)
+![Add/Edit task](img/add-edit_task.png)
 
 * Task execution log.
 
-![Logs](https://bytebucket.org/egorspk/yii2-scheduler/raw/49c076bf79ff8aa281cc8cad5ec2224cbb3fe5bc/img/logs.png)
+![Logs](img/logs.png)
 
 ## Note
 
